@@ -6,8 +6,6 @@
   let state = 'locked';
   let introFinished = false;
   let preloaderTimer;
-  let profileTimer;
-  let finishTimer;
 
   function finishIntro() {
     if (introFinished) return;
@@ -24,26 +22,10 @@
     if (state !== 'unlocking') return;
     $('landing').hidden = true;
     $('profile').hidden = false;
-    $('profile-mark').hidden = false;
-    $('back-home').hidden = false;
     document.body.classList.add('is-profile');
     $('profile').classList.add('is-entering');
     window.scrollTo(0, 0);
     $('profile-title').focus({ preventScroll: true });
-  }
-
-  function returnHome() {
-    clearTimeout(profileTimer);
-    clearTimeout(finishTimer);
-    state = 'locked';
-    $('profile').hidden = true;
-    $('landing').hidden = false;
-    $('profile-mark').hidden = true;
-    $('back-home').hidden = true;
-    $('landing').classList.remove('is-unlocking');
-    $('profile').classList.remove('is-entering', 'is-unlocked');
-    document.body.classList.remove('is-profile');
-    $('unlock').focus();
   }
 
   function finishTransition() {
@@ -63,8 +45,8 @@
       finishTransition();
       return;
     }
-    profileTimer = setTimeout(showProfile, 180);
-    finishTimer = setTimeout(finishTransition, 1450);
+    setTimeout(showProfile, 380);
+    setTimeout(finishTransition, 1450);
   }
 
   function configureLink(id, placeholderId, value, isAllowed) {
@@ -82,8 +64,6 @@
   }
 
   $('unlock').addEventListener('click', unlockCharacter);
-  $('back-home').addEventListener('click', returnHome);
-  $('intro-skip').addEventListener('click', finishIntro);
   if (reduced) {
     finishIntro();
   } else {
