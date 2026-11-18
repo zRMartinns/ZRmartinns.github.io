@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="pl-loading">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rodrigo Martins — Product & UX Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#2C0107;--ink:#D8D6D7;--mute:#ABABAB;--line:#550416;--accent:#C42759;color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#D8D6D7;--ink:#2C0107;--mute:#797878;--line:#C3C3C3;--accent:#C42759;color-scheme:light}}
+:root[data-theme="light"]{--bg:#D8D6D7;--ink:#2C0107;--mute:#797878;--line:#C3C3C3;--accent:#C42759;color-scheme:light}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+header{position:fixed;top:0;left:0;right:0;z-index:11;display:flex;justify-content:space-between;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 18px) 4vw 18px;background:var(--bg)}
+header nav{display:flex;gap:28px;font-weight:600;font-size:15px}
+.logo{font-weight:800;font-size:17px}
+.btn{border:1.5px solid var(--ink);border-radius:999px;padding:9px 20px;font-weight:600;font-size:15px;transition:background .2s,color .2s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:120px 4vw 4vw}
+.role{font-size:clamp(15px,1.6vw,20px);color:var(--mute);margin-bottom:1.2vw}
+h1{font-weight:800;font-size:clamp(56px,15.5vw,260px);line-height:.86;letter-spacing:-.045em}
+.strip{overflow:hidden;margin:5vw -4vw 0}
+.track{display:flex;gap:16px;width:max-content;animation:slide 38s linear infinite}
+.panel{width:clamp(220px,28vw,420px);aspect-ratio:16/10;border-radius:14px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;font-weight:600;font-size:15px}
+.panel i{display:block;height:8px;border-radius:4px;background:rgba(255,255,255,.35);margin-top:6px}
+.panel i:nth-child(2){width:70%}.panel i:nth-child(3){width:45%}
+.p1{background:#C42759}.p2{background:#550416}.p3{background:#797878}.p4{background:#ABABAB;color:#2C0107}.p4 i{background:rgba(44,1,7,.35)}
+.p5{background:#301c51;color:#fff}
+@keyframes slide{to{transform:translateX(calc(-50% - 8px))}}
+section{padding:10vw 4vw}
+h2{font-weight:600;font-size:15px;color:var(--mute);margin-bottom:28px}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:26px 0;border-top:1px solid var(--line);transition:padding-left .3s,color .3s}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row b{font-weight:800;font-size:clamp(34px,7.5vw,120px);letter-spacing:-.035em;line-height:1}
+.row span{color:var(--mute);font-size:15px;text-align:right;max-width:22ch}
+.row:hover{padding-left:2vw;color:var(--accent)}
+.statement{font-weight:600;font-size:clamp(26px,4.4vw,68px);line-height:1.08;letter-spacing:-.025em;max-width:22ch}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:6vw;margin-top:6vw}
+.about p{max-width:52ch;color:var(--mute);font-size:18px}
+.caps{list-style:none;padding:0}
+.caps li{padding:10px 0;border-top:1px solid var(--line);font-weight:600;font-size:18px}
+.big{padding-top:0}
+.big p{font-weight:800;font-size:clamp(48px,12vw,200px);line-height:.95;letter-spacing:-.04em}
+footer{padding:8vw 4vw 4vw;border-top:1px solid var(--line)}
+footer h3{font-weight:800;font-size:clamp(28px,5vw,80px);letter-spacing:-.03em;line-height:1.05}
+footer h3 a{color:var(--accent)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;margin-top:6vw;color:var(--mute);font-size:15px}
+.foot div{display:flex;flex-direction:column;gap:6px}
+@media(max-width:720px){header nav a:not(.btn){display:none}.about{grid-template-columns:1fr}.row{flex-direction:column;gap:8px}.row span{text-align:left;max-width:none}}
+@media(prefers-reduced-motion:reduce){.track{animation:none}html{scroll-behavior:auto}}
+#pl{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:var(--bg);opacity:1;visibility:visible;transition:opacity .22s ease}#pl.pl-done{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .32s ease,visibility 0s .32s}#pl svg{width:clamp(84px,14vw,150px);height:auto;display:block}html.pl-loading{overflow:hidden}.pl-ln{fill:none;stroke:#BF1C23;stroke-linejoin:round;stroke-linecap:butt;stroke-dasharray:1 1;stroke-dashoffset:1}.pl-w{stroke-width:6}.pl-b{stroke-width:12}.pl-glow{opacity:.4}.pl-on .pl-ln{animation-duration:1.5s;animation-timing-function:linear;animation-fill-mode:both}.pl-on .pl-k0{animation-name:pl-k0}.pl-on .pl-k1{animation-name:pl-k1}.pl-on .pl-glow{animation:pl-g 1.5s linear both}@keyframes pl-k0{0%{stroke-dasharray:1 1;stroke-dashoffset:1}54.538%{stroke-dasharray:1 1;stroke-dashoffset:0}54.548%,100%{stroke-dasharray:none;stroke-dashoffset:0}}@keyframes pl-k1{0%,54.538%{stroke-dasharray:1 1;stroke-dashoffset:1}60%{stroke-dasharray:1 1;stroke-dashoffset:0}60.01%,100%{stroke-dasharray:none;stroke-dashoffset:0}}@keyframes pl-g{0%,60%{opacity:.4}70%{opacity:.9}100%{opacity:.5}}@media (prefers-reduced-motion:reduce){.pl-on .pl-ln{animation:none!important}.pl-ln{stroke-dasharray:none!important;stroke-dashoffset:0!important}.pl-on .pl-glow{animation:none!important}}
+</style>
+<noscript><style>#pl{display:none}html.pl-loading{overflow:auto}</style></noscript>
+</head>
+<body>
+<div id="pl" role="status" aria-label="Carregando"><svg xmlns="http://www.w3.org/2000/svg" viewBox="658.6 187.1 602.8 705.8" aria-hidden="true"><defs><filter id="pl-blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="9"/></filter></defs><g class="pl-glow" filter="url(#pl-blur)"><path class="pl-ln pl-b pl-k0" pathLength="1" d="M921.988 237.264C934.289 235.858 946.797 235.136 959.473 235.136C972.15 235.136 984.658 235.858 996.958 237.264C1001.569 237.791 1006.151 238.414 1010.702 239.131C1030.444 242.242 1049.599 247.122 1067.999 253.604L1067.999 397.579C1075.309 393.144 1076.54 392.55 1077.546 392.065C1078.519 391.596 1079.281 391.229 1085.117 387.593L1139.573 353.665L1142.153 352.058L1142.153 288.251C1168.962 305.679 1192.988 327.028 1213.418 351.486L1213.418 715.704C1187.124 755.856 1173.07 765.56 1142.153 770.038L1142.153 436.419L1067.659 482.83L1067.472 482.947L1026.788 508.295L1025.438 509.136L1067.999 532.895L1067.999 822.135C1045.634 831.874 1021.816 838.897 996.958 842.789L996.958 526.879L960 549.905L922.515 526.551L921.988 526.223L921.988 844.864C904.533 843.123 887.529 839.846 871.115 835.171L852.001 823.263L852.001 482.618L777.847 436.419L777.847 770.038C746.93 765.56 732.876 755.856 706.582 715.704L706.582 351.486C727.012 327.028 751.038 305.679 777.847 288.251L777.847 352.058L780.427 353.665L834.883 387.593C840.719 391.229 841.481 391.596 842.454 392.065C843.46 392.55 844.691 393.144 852.001 397.579L852.001 253.235C870.866 246.662 890.52 241.771 910.781 238.742C914.497 238.186 918.233 237.693 921.988 237.264Z"/><path class="pl-ln pl-b pl-k1" pathLength="1" d="M996.958 441.697L996.958 306.477C992.914 304.553 988.698 302.931 984.34 301.639C976.451 299.3 968.098 298.044 959.45 298.044C951.884 298.044 944.542 299.006 937.54 300.813C932.136 302.207 926.934 304.106 921.988 306.455L921.988 441.04L923.833 442.19L952.923 461.135L960 465.544L967.077 461.135L996.167 442.19L996.958 441.697Z"/></g><g><path class="pl-ln pl-w pl-k0" pathLength="1" d="M921.988 237.264C934.289 235.858 946.797 235.136 959.473 235.136C972.15 235.136 984.658 235.858 996.958 237.264C1001.569 237.791 1006.151 238.414 1010.702 239.131C1030.444 242.242 1049.599 247.122 1067.999 253.604L1067.999 397.579C1075.309 393.144 1076.54 392.55 1077.546 392.065C1078.519 391.596 1079.281 391.229 1085.117 387.593L1139.573 353.665L1142.153 352.058L1142.153 288.251C1168.962 305.679 1192.988 327.028 1213.418 351.486L1213.418 715.704C1187.124 755.856 1173.07 765.56 1142.153 770.038L1142.153 436.419L1067.659 482.83L1067.472 482.947L1026.788 508.295L1025.438 509.136L1067.999 532.895L1067.999 822.135C1045.634 831.874 1021.816 838.897 996.958 842.789L996.958 526.879L960 549.905L922.515 526.551L921.988 526.223L921.988 844.864C904.533 843.123 887.529 839.846 871.115 835.171L852.001 823.263L852.001 482.618L777.847 436.419L777.847 770.038C746.93 765.56 732.876 755.856 706.582 715.704L706.582 351.486C727.012 327.028 751.038 305.679 777.847 288.251L777.847 352.058L780.427 353.665L834.883 387.593C840.719 391.229 841.481 391.596 842.454 392.065C843.46 392.55 844.691 393.144 852.001 397.579L852.001 253.235C870.866 246.662 890.52 241.771 910.781 238.742C914.497 238.186 918.233 237.693 921.988 237.264Z"/><path class="pl-ln pl-w pl-k1" pathLength="1" d="M996.958 441.697L996.958 306.477C992.914 304.553 988.698 302.931 984.34 301.639C976.451 299.3 968.098 298.044 959.45 298.044C951.884 298.044 944.542 299.006 937.54 300.813C932.136 302.207 926.934 304.106 921.988 306.455L921.988 441.04L923.833 442.19L952.923 461.135L960 465.544L967.077 461.135L996.167 442.19L996.958 441.697Z"/></g></svg></div>
+<header>
+  <a class="logo" href="#topo">Rodrigo Martins ©</a>
+  <nav><a href="#work">Cases</a><a href="#about">Sobre</a><a class="btn" href="#contato">Fale comigo</a></nav>
+</header>
+
+<main id="topo">
+  <div class="hero">
+    <p class="role">Product & UX Designer</p>
+    <h1>Rodrigo<br>Martins</h1>
+    <div class="strip" aria-hidden="true">
+      <div class="track">
+        <div class="panel p1">Copa Energia<div><i></i><i></i><i></i></div></div>
+        <div class="panel p2">Farmarcas Hub<div><i></i><i></i><i></i></div></div>
+        <div class="panel p3">eFootball<div><i></i><i></i><i></i></div></div>
+        <div class="panel p4">Chá de Bebê<div><i></i><i></i><i></i></div></div>
+        <div class="panel p5">UX Designer GTA 6<div><i></i><i></i><i></i></div></div>
+        <div class="panel p1">Copa Energia<div><i></i><i></i><i></i></div></div>
+        <div class="panel p2">Farmarcas Hub<div><i></i><i></i><i></i></div></div>
+        <div class="panel p3">eFootball<div><i></i><i></i><i></i></div></div>
+        <div class="panel p4">Chá de Bebê<div><i></i><i></i><i></i></div></div>
+        <div class="panel p5">UX Designer GTA 6<div><i></i><i></i><i></i></div></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="work">
+    <h2>Cases selecionados</h2>
+    <a class="row" href="#"><b>Chá de Bebê</b><span>Produto digital, UX/UI</span></a>
+    <a class="row" href="#"><b>Copa Energia</b><span>Case conceitual, UX/UI</span></a>
+    <a class="row" href="#"><b>Farmarcas Hub</b><span>Dashboard B2B, Product Design</span></a>
+    <a class="row" href="#"><b>eFootball</b><span>Redesign conceitual, UI</span></a>
+    <a class="row" href="rmartinns.html"><b>UX Designer GTA 6</b><span>Criação de site, Figma e direção de arte</span></a>
+  </section>
+
+  <section id="about">
+    <p class="statement">Desenho produtos digitais que unem negócio, uso real e acabamento visual.</p>
+    <div class="about">
+      <p>Atuo de ponta a ponta no ciclo do produto: UX/UI, requisitos e QA, em sistemas usados por franquias, equipes e clientes finais. Vim do marketing e da comunicação, e isso me ajuda a desenhar pensando no resultado, não só na tela.</p>
+      <ul class="caps">
+        <li>UX e UI Design</li>
+        <li>Requisitos de produto</li>
+        <li>QA e validação</li>
+        <li>Figma e protótipos</li>
+        <li>Front-end</li>
+        <li>Branding</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="big" aria-label="Áreas de atuação">
+    <p>UX/UI<br>Produto<br>QA<br>Front-end</p>
+  </section>
+</main>
+
+<footer id="contato">
+  <h3>Baseado em São Paulo.<br>Disponível para todo o Brasil.</h3>
+  <h3 style="margin-top:1.2em"><a href="mailto:seuemail@exemplo.com">Vamos conversar.</a></h3>
+  <div class="foot">
+    <div><b>Navegação</b><a href="#topo">Início</a><a href="#work">Cases</a><a href="#about">Sobre</a></div>
+    <div><b>Social</b><a href="https://www.linkedin.com/">LinkedIn</a><a href="mailto:seuemail@exemplo.com">E-mail</a></div>
+    <div><b>Rodrigo Martins ©</b><span>Design e código por mim, movido a café.</span></div>
+  </div>
+</footer>
+<script>(function(){
+var pl=document.getElementById('pl'),root=document.documentElement,red=matchMedia('(prefers-reduced-motion: reduce)').matches,t0=performance.now(),busy=true;
+function run(){pl.classList.remove('pl-on');void pl.offsetWidth;pl.classList.add('pl-on')}
+function show(){pl.classList.remove('pl-done');pl.removeAttribute('aria-hidden');root.classList.add('pl-loading');run()}
+function hide(){pl.classList.add('pl-done');pl.setAttribute('aria-hidden','true');root.classList.remove('pl-loading');busy=false}
+run();
+function ready(){setTimeout(hide,Math.max(0,(red?500:1400)-(performance.now()-t0)))}
+if(document.readyState==='complete')ready();else addEventListener('load',ready);
+setTimeout(function(){if(busy)hide()},6000);
+document.addEventListener('click',function(e){
+ var a=e.target.closest&&e.target.closest('a[href^="#"]');
+ if(!a||busy||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey)return;
+ var h=a.getAttribute('href');if(h.length<2)return;
+ var tg=document.querySelector(h);if(!tg)return;
+ e.preventDefault();busy=true;show();
+ setTimeout(function(){root.style.scrollBehavior='auto';tg.scrollIntoView();root.style.scrollBehavior='';history.replaceState(null,'',h)},320);
+ setTimeout(hide,red?450:950);
+});
+})();</script>
+</body>
+</html>
